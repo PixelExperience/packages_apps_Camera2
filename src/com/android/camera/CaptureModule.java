@@ -1541,8 +1541,9 @@ public class CaptureModule extends CameraModule implements
      * TODO: This needs to change so that we store the direction directly in the
      * settings, rather than a Camera ID.
      */
-    private static Facing getFacingFromCameraId(int cameraId) {
-        return cameraId == 1 ? Facing.FRONT : Facing.BACK;
+    private Facing getFacingFromCameraId(int cameraId) {
+        int frontCamId = mContext.getResources().getInteger(R.integer.front_camera_id);
+        return cameraId == frontCamId ? Facing.FRONT : Facing.BACK;
     }
 
     private void resetTextureBufferSize() {

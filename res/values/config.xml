@@ -19,4 +19,8 @@
 <resources>
     <!-- Maximum recording length in milliseconds. 0 means unlimited. -->
     <integer name="max_video_recording_length">0</integer>
+
+    <!-- Allows you to change front camera id for devices with only one
+         camera. 1 is Default. -->
+    <integer name="front_camera_id">1</integer>
 </resources>
