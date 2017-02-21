@@ -180,6 +180,10 @@ public class Keys {
 
         settingsManager.setDefaults(KEY_SHOULD_SHOW_SETTINGS_BUTTON_CLING, true);
 
+        settingsManager.setDefaults(KEY_RECORD_LOCATION, false);
+        if (!settingsManager.isSet(SettingsManager.SCOPE_GLOBAL, KEY_RECORD_LOCATION)) {
+            settingsManager.setToDefault(SettingsManager.SCOPE_GLOBAL, KEY_RECORD_LOCATION);
+        }
     }
 
     /** Helper functions for some defined keys. */
