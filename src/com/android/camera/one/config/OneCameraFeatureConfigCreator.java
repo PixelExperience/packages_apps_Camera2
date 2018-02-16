@@ -106,7 +106,7 @@ public class OneCameraFeatureConfigCreator {
                 }
 
                 // On FULL devices starting with L-MR1 we can run ZSL.
-                if (supportedLevel == CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_FULL) {
+                if (supportedLevel >= CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_FULL) {
                     return CaptureSupportLevel.ZSL;
                 }
 
