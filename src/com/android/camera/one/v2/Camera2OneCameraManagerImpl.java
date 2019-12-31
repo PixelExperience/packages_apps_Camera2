@@ -145,9 +145,7 @@ public class Camera2OneCameraManagerImpl implements OneCameraManager {
             id = findFirstBackCameraId();
         }
 
-        if (id != null) {
-            mCameraFacingCache.put(facing, id);
-        }
+        mCameraFacingCache.put(facing, id);
         return id;
     }
 
